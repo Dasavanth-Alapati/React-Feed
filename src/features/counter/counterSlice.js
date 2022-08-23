@@ -65,7 +65,7 @@ export const selectCount = (state) => state.counter.value;
 // Here's an example of conditionally dispatching actions based on current state.
 export const incrementIfOdd = (amount) => (dispatch, getState) => {
   const currentValue = selectCount(getState());
-  if (currentValue % 2 === 1) {
+  if (currentValue % 2 === 1 || currentValue % 2 === -1) {
     dispatch(incrementByAmount(amount));
   }
 };
