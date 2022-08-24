@@ -7,7 +7,6 @@ class Feed extends Component {
   state = { feed:null }
   componentDidMount() {
     fetchfeed().then(res => {
-    console.log(res.data);
     this.setState({feed:res.data});
     })
     
