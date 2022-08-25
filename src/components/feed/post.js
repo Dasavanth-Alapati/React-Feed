@@ -12,8 +12,8 @@ function Post(props) {
         <Card.Text>
           {props.post.content}
         </Card.Text>
-        <Card.Text><small>{props.post.profileid.credid.username}</small></Card.Text>
-        <Interactor></Interactor>
+        <Card.Subtitle><small>{props.post.profileid.credid.username}</small></Card.Subtitle>
+        <Interactor like = {props.post.like}></Interactor>
       </Card.Body>
       <Card.Footer className="text-muted">{moment(props.post.created_at).fromNow()}</Card.Footer>
     </Card>
