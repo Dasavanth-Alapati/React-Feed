@@ -16,20 +16,20 @@ const LoginSchema = Yup.object().shape({
 
 const Login = () => {
   const navigate = useNavigate()
-  const [badLogin,setBadLogin] = useState(<></>);
+  const [badLogin, setBadLogin] = useState(<></>);
   return (
 
-    <Container className="m-5">
+    <Container className="d-flex justify-content-center mt-5">
       <Formik
         initialValues={{
           username: '',
           password: '',
         }}
         validationSchema={LoginSchema}
-        onSubmit={async (values,{resetForm}) => {
+        onSubmit={async (values, { resetForm }) => {
           await login(values).then((res) => {
             navigate('/feed');
-          }).catch(()=>{
+          }).catch(() => {
             setBadLogin(<Alert variant='danger' onClose={() => setBadLogin(<></>)} dismissible>invalid Credentials</Alert>);
             resetForm();
           });
@@ -44,7 +44,7 @@ const Login = () => {
           handleSubmit,
 
         }) => (
-          <Form noValidate onSubmit={handleSubmit}>
+          <Form noValidate onSubmit={handleSubmit} style={{ width: '50%' }}>
             <Form.Group className="mb-3" controlId="formBasicUsername">
               <Form.Label>Username</Form.Label>
               <Form.Control
@@ -73,9 +73,9 @@ const Login = () => {
             </Form.Group>
             {badLogin}
             <Button variant="primary" type="submit" >Login</Button>
-            
+
           </Form>
-          
+
         )
         }
       </Formik>
