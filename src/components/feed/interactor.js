@@ -4,7 +4,7 @@ import { faThumbsUp as rfaThumbsUp } from '@fortawesome/free-regular-svg-icons';
 import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsDown as rfaThumbsDown } from '@fortawesome/free-regular-svg-icons';
 import Button from 'react-bootstrap/Button';
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 class Interactor extends Component {
     state = {
