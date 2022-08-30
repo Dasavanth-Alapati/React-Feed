@@ -1,8 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import { faThumbsUp as rfaThumbsUp } from '@fortawesome/free-regular-svg-icons';
-import { faThumbsDown } from '@fortawesome/free-solid-svg-icons';
-import { faThumbsDown as rfaThumbsDown } from '@fortawesome/free-regular-svg-icons';
+import { faThumbsUp,faThumbsDown } from '@fortawesome/free-solid-svg-icons';
+import { faThumbsUp as rfaThumbsUp,faThumbsDown as rfaThumbsDown } from '@fortawesome/free-regular-svg-icons';
 import Button from 'react-bootstrap/Button';
 import React, { Component } from 'react';
 
