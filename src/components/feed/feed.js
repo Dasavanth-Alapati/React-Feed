@@ -14,10 +14,7 @@ class Feed extends Component {
   render() {
     let posts = []
     if (this.state.feed !== null) {
-      for (let i = 0; i < this.state.feed.length; i++) {
-        const element = this.state.feed[i];
-        posts.push(<Post key={element.id} post={element} />)
-      }
+      posts = this.state.feed.map((element) => <Post post={element} />)
       return (<Container className="d-flex justify-content-center"><div className='mt-3'>{posts}</div></Container>);
     }
     else return (<div>Loading...</div>)
