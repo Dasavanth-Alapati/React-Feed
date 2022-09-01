@@ -29,7 +29,11 @@ const Login = () => {
         onSubmit={async (values, { resetForm }) => {
           await login(values).then((res) => {
             navigate('/feed');
-          }).catch(() => {
+          }).catch((err) => {
+            console.error(err);
+            if (err.code === 'ERR_NETWORK')
+            setBadLogin(<Alert variant='danger' onClose={() => setBadLogin(<></>)} dismissible>Server Error</Alert>);
+            else if (err.code === 'ERR_BAD_REQUEST')
             setBadLogin(<Alert variant='danger' onClose={() => setBadLogin(<></>)} dismissible>invalid Credentials</Alert>);
             resetForm();
           });
