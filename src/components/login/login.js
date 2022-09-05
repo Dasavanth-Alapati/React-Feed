@@ -28,6 +28,7 @@ const Login = () => {
         validationSchema={LoginSchema}
         onSubmit={async (values, { resetForm }) => {
           await login(values).then((res) => {
+            localStorage.setItem('token',JSON.stringify(res.data));
             navigate('/feed');
           }).catch((err) => {
             if (err.code === 'ERR_NETWORK')
