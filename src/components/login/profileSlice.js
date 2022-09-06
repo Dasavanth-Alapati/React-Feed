@@ -6,7 +6,7 @@ const initialState = {
 }
 
 
-const loginSlice = createSlice({
+const profileSlice = createSlice({
   name: 'profile',
   initialState,
   reducers: {
@@ -16,6 +16,6 @@ const loginSlice = createSlice({
   }
 });
 
-export const {setprofile} = loginSlice.actions
+export const {setprofile} = profileSlice.actions
 
-export default loginSlice.reducer
+export default profileSlice.reducer
