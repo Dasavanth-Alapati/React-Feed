@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import * as  Yup from 'yup';
 import { Formik } from 'formik';
 import { useNavigate } from 'react-router-dom';
-import { login } from '../api/api';
+import { login } from '../services/api';
 
 const LoginSchema = Yup.object().shape({
   username: Yup.string().required('Username is required').min(3, 'Too Short!'),
