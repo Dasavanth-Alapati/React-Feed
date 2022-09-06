@@ -1,7 +1,7 @@
 import React from 'react';
 import  Feed  from './components/feed/feed';
-import Login from './components/login/login';
-import NavBar from './components/navbar/navbar';
+import Login from './components/login';
+import NavBar from './components/navbar';
 import {Routes,Route, Link } from "react-router-dom";
 import { Container } from 'react-bootstrap';
 function App() {
