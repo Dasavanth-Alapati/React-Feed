@@ -1,6 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import Interactor from './interactor';
-import * as moment from 'moment';
+import moment from 'moment';
 
 
 function Post(props) {
