@@ -1,5 +1,5 @@
 import React from 'react';
-import  Feed  from './components/feed/feed';
+import  Feed  from './components/feed';
 import Login from './components/login';
 import NavBar from './components/navbar';
 import {Routes,Route, Link } from "react-router-dom";

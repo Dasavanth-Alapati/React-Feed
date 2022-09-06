@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
-import { fetchfeed } from '../../api/api';
+import { fetchfeed } from '../api/api';
 import Post from './post';
 
 class Feed extends Component {

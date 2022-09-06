@@ -1,6 +1,6 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import logo from '../../favicon.ico';
+import logo from '../favicon.ico';
 import { Link } from "react-router-dom";
 
 
