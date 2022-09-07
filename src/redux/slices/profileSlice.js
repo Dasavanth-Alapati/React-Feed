@@ -2,7 +2,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    profile:null,
+    data:null,
 }
 
 
@@ -11,7 +11,7 @@ const profileSlice = createSlice({
   initialState,
   reducers: {
     setProfile: (state,action) => {
-      state.profile = action.payload;
+      state.data = action.payload;
     },
   }
 });
