@@ -33,7 +33,7 @@ const Login = (props) => {
         validationSchema={LoginSchema}
         onSubmit={async (values, { resetForm }) => {
           await login(values).then(async () => {
-            navigate('/feed');
+            navigate('/');
             props.setLoggedIn(true);
             await fetchProfile().then((res) => {
               dispatch(setProfile(res.data));

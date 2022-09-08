@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import  Feed  from './components/feed';
 import Login from './components/login';
 import NavBar from './components/navbar';
-import {Routes,Route, Link } from "react-router-dom";
-import { Container } from 'react-bootstrap';
+import {Routes,Route } from "react-router-dom";
 import { isLoggedIn } from 'axios-jwt';
 import { useDispatch } from 'react-redux';
 import { fetchProfile } from './services/api';
@@ -23,9 +22,8 @@ function App() {
     <div className="App">
       <NavBar loggedIn = {loggedIn} setLoggedIn = {setLoggedIn}/>
       <Routes>
-      <Route path='/' element={<Container>Welcome, please <Link to='/login'>Signin</Link> to view feed</Container>}/>
       <Route path='/login' element={<Login setLoggedIn = {setLoggedIn}/>}/>
-      <Route path='/Feed' element={<Feed/>}/>
+      <Route path='/' element={<Feed/>}/>
       </Routes>
     </div>
 
