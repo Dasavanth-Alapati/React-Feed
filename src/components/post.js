@@ -12,7 +12,7 @@ function Post(props) {
         <Card.Text>
           {props.post.content}
         </Card.Text>
-        <Card.Subtitle><small>{props.post.profileid.credid.username}</small></Card.Subtitle>
+        <Card.Subtitle><small>{props.post.profileid.credid.username}</small></Card.Subtitle><br/>
         <Interactor like = {props.post.like}></Interactor>
       </Card.Body>
       <Card.Footer className="text-muted">{moment(props.post.created_at).fromNow()}</Card.Footer>
