@@ -4,6 +4,7 @@ import { faThumbsUp as rfaThumbsUp, faThumbsDown as rfaThumbsDown } from '@forta
 import Button from 'react-bootstrap/Button';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
+import { likeUpdate } from '../services/api';
 
 
 const Interactor = (props) => {
@@ -28,6 +29,15 @@ const Interactor = (props) => {
         likecount: props.like.like,
         dislikecount: props.like.dislike,
     });
+
+    const update = (status) => {
+        likeUpdate({
+            like:props.like.id,
+            status:status,
+            user:id,
+        });
+        
+    };
     const like = () => {
         let sudoState = { ...state };
         if (sudoState.like === rfaThumbsUp) {
@@ -37,10 +47,12 @@ const Interactor = (props) => {
                 sudoState.dislike = rfaThumbsDown;
                 sudoState.dislikecount -= 1;
             }
+            update(1);
         }
         else {
             sudoState.like = rfaThumbsUp;
             sudoState.likecount -= 1;
+            update(0);
         }
         setState(sudoState);
     };
@@ -53,10 +65,12 @@ const Interactor = (props) => {
                 sudoState.like = rfaThumbsUp;
                 sudoState.likecount -= 1;
             }
+            update(-1);
         }
         else {
             sudoState.dislike = rfaThumbsDown;
             sudoState.dislikecount -= 1;
+            update(0);
         }
         setState(sudoState);
     };

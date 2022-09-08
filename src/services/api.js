@@ -36,3 +36,7 @@ export async function fetchProfile(id = null) {
     else
         return await http.get('profile/apiprofile');
 }
+
+export async function likeUpdate(data){
+    return await http.post('likes/apilike/', data);
+}
