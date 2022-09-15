@@ -55,7 +55,6 @@ const Login = (props) => {
           handleChange,
           handleBlur,
           handleSubmit,
-
         }) => (
           <Form noValidate onSubmit={handleSubmit} style={{ width: '50%' }}>
             <Form.Group className="mb-3" controlId="formBasicUsername">
